@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: auto auto 1fr auto auto auto auto;
+  grid-gap: 1.2rem;
+  align-items: center;
+  width: 100%;
+  padding: 0 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.nine-dots {
+  display: inline-grid;
+  place-content: left center;
+  grid-gap: 2px;
+  grid-template-columns: repeat(3, 4px);
+}
+
+.dot {
+  height: 4px;
+  width: 4px;
+  background-color: #555;
+}
+.nine-dots:hover {
+  cursor: pointer;
+}
+.nine-dots:hover > .dot {
+  background-color: #000;
+}
+
+button, .button {
+  margin: 0 5px;
+  border: 1px solid #F0F0F0;
+  border-radius: 4px;
+  padding: 0.6rem 1rem;
+  background-color: #F1F1F1;
+  color: #555;
+}
+button:hover, .button:hover {
+  border-color: #BBB;
+  box-shadow: 0 1px #DDD;
+  color: #000000;
+}
+
+.primary-button {
+  margin: 1rem 0;
+  border-radius: 2px;
+  padding: .5rem .8rem;
+  background-color: #3e75ee;
+  color: #F7F7F7;
+  font-weight: 600;
+}
+.primary-button:hover {
+  color: #F7F7F7;
+  text-decoration: none;
+  cursor: default;
+}
+
+main {
+  justify-self: center;
+  padding-top: 6rem;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+}
+
+.magnifying-glass {
+  padding-right: 1rem;
+}
+
+.mic {
+  padding-left: 1rem;
+}
+
+.search-box {
+  margin: 2rem;
+  border: 1px solid #DDD;
+  border-radius: 22.5px;
+  padding: 8px 18px;
+  height: 46px;
+}
+.search-box:active, .search-box:hover, .search-box:focus {
+  box-shadow: 0 1px 3px 1px #DDD;
+}
+
+.search {
+  margin: auto;
+  padding: 0;
+  border: 0;
+  width: 390px;
+  height: 30px;
+  font-size: 16px;
+}
+.search:focus {
+  outline: 0;
+}
+
+.submit-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: auto auto auto 1fr auto auto auto;
+  grid-gap: 1.6rem;
+  align-items: center;
+  width: 100%;
+  padding: 0.7rem 1.8rem;
+  border-top: 1px solid #e0e0e0;
+  background-color: #F0F0F0;
+}
+footer a {
+  color: #6F6F6F;
+}
